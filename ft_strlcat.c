@@ -6,11 +6,11 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:59:31 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/03 16:03:46 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/03 17:04:35 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 'libft.h'
+#include "libft.h"
 
 size_t	strlcat(char *dst, const char *src, size_t size)
 {
