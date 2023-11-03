@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:52:46 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/03 11:54:29 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/03 19:17:27 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,6 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 	{
 		ft_putnbr_fd(nbr / 10, fd);
-		write(fd, &(char){(nbr + '0') % 10}, 1);
+		write(fd, &(char){nbr % 10 + '0'}, 1);
 	}
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr_fd(10, 1);
-// }

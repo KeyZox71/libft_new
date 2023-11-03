@@ -6,13 +6,13 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/03 11:59:46 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/03 19:10:18 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
+CC = clang
 
 SRCS = ft_atoi.c \
 		ft_bzero.c \
