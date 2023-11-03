@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/03 19:10:18 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/03 23:05:37 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS = ft_atoi.c \
 		ft_putchar_fd.c \
 		ft_putnbr_fd.c \
 		ft_putstr_fd.c \
+		ft_strdup.c \
 		ft_memcpy.c \
 		ft_memset.c \
 		ft_strlcpy.c \

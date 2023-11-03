@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/03 15:57:10 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:06:30 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strdup(const char *s);
 void	ft_putstr_fd(char *s, int fd);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcpy(char	*dst, const char	*src, size_t	size);
