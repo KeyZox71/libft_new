@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:57:39 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/03 23:08:23 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/04 11:10:30 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	len = ft_strlen(s);
-	result = malloc(sizeof(char) * len);
+	result = malloc(sizeof(char) * (len + 1));
 	if (result == NULL)
 		return (NULL);
 	while (s[i])
