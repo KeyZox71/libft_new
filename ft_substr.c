@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:59:58 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/03 09:56:01 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/04 15:18:28 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		result[0] = '\0';
 		return (result);
 	}
-	result = malloc(len * sizeof(char));
+	result = malloc((len + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
 	while (i < len && s[start + i])

@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/03 23:05:37 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/04 15:37:27 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ SRCS = ft_atoi.c \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
-
+		ft_strlcat.c \
+		ft_strjoin.c \
+	
 OBJS = $(SRCS:.c=.o)
 
 FLAGS = -Werror -Wall -Wextra
@@ -40,6 +42,10 @@ HEADER = libft.h
 
 $(NAME): $(OBJS)
 	ar -rcs	$(NAME) $(OBJS)
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 %.o: %.c
 	$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@

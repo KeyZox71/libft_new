@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:45:18 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/02 10:08:05 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/04 15:32:14 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 	int		j;
 	char	*str_result;
-
+// initialize str_result
 	i = 0;
 	j = 0;
 	while (s[i] != c || s[i])
@@ -29,6 +29,6 @@ char	*ft_strchr(const char *s, int c)
 		}
 		return (str_result);
 	}
-	str_result[0] = '\0';
+	str_result[i] = '\0';
 	return (str_result);
 }
