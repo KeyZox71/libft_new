@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/04 15:37:27 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/05 10:48:31 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS = ft_atoi.c \
 		ft_toupper.c \
 		ft_strlcat.c \
 		ft_strjoin.c \
+		ft_strncmp.c \
 	
 OBJS = $(SRCS:.c=.o)
 
