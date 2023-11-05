@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 11:45:55 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/05 15:06:13 by adjoly           ###   ########.fr       */
+/*   Created: 2023/11/05 10:40:45 by adjoly            #+#    #+#             */
+/*   Updated: 2023/11/05 11:02:33 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_strncmp(const char *s1, const char *s2, size_t	n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (s == NULL)
-		return ;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
+	while (s1[i] && s2[i] && i < n && s1[i] != s2[i])
 		i++;
-	}
+	return (s1[i] - s2[i]);
 }

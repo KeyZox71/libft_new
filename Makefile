@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/05 10:48:31 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/05 14:57:25 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS = ft_atoi.c \
 		ft_isalpha.c \
 		ft_isascii.c \
 		ft_isdigit.c \
+		ft_isprint.c \
 		ft_putchar_fd.c \
 		ft_putnbr_fd.c \
 		ft_putstr_fd.c \
@@ -34,6 +35,7 @@ SRCS = ft_atoi.c \
 		ft_strlcat.c \
 		ft_strjoin.c \
 		ft_strncmp.c \
+		ft_strchr.c \
 	
 OBJS = $(SRCS:.c=.o)
 
