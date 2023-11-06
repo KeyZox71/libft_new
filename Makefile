@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/05 14:57:25 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/05 22:23:43 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS = ft_atoi.c \
 		ft_strdup.c \
 		ft_memcpy.c \
 		ft_memset.c \
+		ft_memmove.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
 		ft_substr.c \
@@ -36,7 +37,9 @@ SRCS = ft_atoi.c \
 		ft_strjoin.c \
 		ft_strncmp.c \
 		ft_strchr.c \
-	
+		ft_itoa.c \
+		ft_calloc.c \
+
 OBJS = $(SRCS:.c=.o)
 
 FLAGS = -Werror -Wall -Wextra
