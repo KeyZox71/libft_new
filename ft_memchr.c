@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:52:53 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/05 14:54:57 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/06 15:37:15 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	
+	int	i;
+
+	i = 0;
+	while (i < n && ((unsigned char *)s)[i] && ((char *)s) != c)
+	{
+		s++;
+		i++;
+	}
+	return (NULL);
 }
