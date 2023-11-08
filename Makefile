@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/06 17:37:53 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/08 12:14:33 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,8 @@ SRCS = ft_atoi.c \
 		ft_strchr.c \
 		ft_itoa.c \
 		ft_calloc.c \
+		ft_memchr.c \
+		ft_memcmp.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -49,7 +51,7 @@ HEADER = libft.h
 $(NAME): $(OBJS)
 	ar -rcs	$(NAME) $(OBJS)
 
-# so:
+so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
