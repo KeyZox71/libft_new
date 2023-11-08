@@ -6,11 +6,13 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:52:53 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/08 11:59:58 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/08 14:52:06 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#define BUFFER_SIZE 10
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
