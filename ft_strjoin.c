@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:44:09 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/04 14:06:43 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/09 19:19:28 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
+	// int		i;
 	char	*result;
 	size_t	len_s1;
 	size_t	len_s2;
 
-	i = 0;
+	// i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	result = malloc(len_s1 + len_s2 + 1);
