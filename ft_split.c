@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 19:04:42 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/11 11:15:37 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/11 11:27:49by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	int		i;
 	int		j;
-	int		k;
 
 	i = 0;
 	j = 0;
@@ -75,17 +74,8 @@ char	**ft_split(char const *s, char c)
 			j++;
 		if (s[j] != '\0' && s[j] != c)
 		{
-			k = 0;
-			result[i] = malloc((ft_countletter(&s[j], c) + 1) * sizeof(char));
-			if (result == NULL)
-				return (ft_freearr(result));
-			while (s[j] != c)
-			{
-				result[i][k] = s[j];
-				j++;
-				k++;
-			}
-			result[i][k] = '\0';
+			result[i] = ft_substr(s, j, ft_countletter(s + j, c));
+			j += ft_countletter(s + j, c);
 		}
 		i++;
 	}
