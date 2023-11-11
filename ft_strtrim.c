@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 13:44:09 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/11 01:26:47 by adjoly           ###   ########.fr       */
+/*   Created: 2023/11/11 00:37:37 by adjoly            #+#    #+#             */
+/*   Updated: 2023/11/11 01:09:36 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
+	int		i;
+	int		j;
 	char	*result;
-	size_t	i;
-	size_t	j;
 
 	i = 0;
-	j = 0;
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	result = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (result == NULL)
-		return (NULL);
-	while (s1[i])
-	{
-		result[i] = s1[i];
+	j = ft_strlen(s1);
+	while (ft_strchr(set, s1[i]) != 0)
 		i++;
-	}
-	while (s2[j])
-	{
-		result[i] = s2[j];
-		i++;
-		j++;
-	}
-	result[i] = '\0';
+	while (ft_strrchr(set, s1[j]) != 0)
+		j--;
+	result = ft_substr(s1, i, (j - i) + 1);
 	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:02:26 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/05 22:23:07 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/11 00:55:15 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*result;
 
 	if (size != 0 && nmemb != 0 && (nmemb * size) / nmemb != size)
-		return (NULL);
+		return (malloc(0));
 	result = malloc(size * nmemb);
 	if (result == NULL)
 		return (NULL);
