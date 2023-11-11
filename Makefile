@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/11 11:49:54 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/11 15:10:24 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,10 +47,11 @@ SRCS = ft_atoi.c \
 		ft_strtrim.c \
 		ft_split.c \
 		ft_strmapi.c \
+		ft_striteri.c \
 
 OBJS = $(SRCS:.c=.o)
 
-FLAGS = -g -Werror -Wall -Wextra
+FLAGS = -Werror -Wall -Wextra
 
 HEADER = libft.h
 
