@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/11 15:10:24 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/11 18:38:12 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,19 @@ SRCS = ft_atoi.c \
 		ft_strmapi.c \
 		ft_striteri.c \
 
+SRCS_BONUS= ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+
 OBJS = $(SRCS:.c=.o)
+
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 FLAGS = -Werror -Wall -Wextra
 
@@ -59,13 +71,16 @@ $(NAME): $(OBJS)
 	ar -rcs	$(NAME) $(OBJS)
 
 # so:
-	# $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	# gcc -nostartfiles -shared -o libft.so $(OBJS)
+	# $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
+	# gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
 %.o: %.c
 	$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@
 
 all: $(NAME)
+
+bonus: $(OBJS_BONUS)
+	ar -rcs $(NAME) $(OBJS_BONUS)
 
 clean:
 	rm -f $(OBJS)
