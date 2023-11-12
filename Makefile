@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/11 18:38:12 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/12 09:08:30 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,10 +70,6 @@ HEADER = libft.h
 $(NAME): $(OBJS)
 	ar -rcs	$(NAME) $(OBJS)
 
-# so:
-	# $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
-	# gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
-
 %.o: %.c
 	$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@
 
@@ -83,7 +79,7 @@ bonus: $(OBJS_BONUS)
 	ar -rcs $(NAME) $(OBJS_BONUS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
