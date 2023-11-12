@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 19:04:42 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/11 11:27:49by adjoly           ###   ########.fr       */
+/*   Created: 2023/11/12 09:14:19 by adjoly            #+#    #+#             */
+/*   Updated: 2023/11/12 09:17:04 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
-	i = 0;
+	i = -1;
 	j = 0;
 	if (s == NULL)
 		return (NULL);
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 	result = malloc((w_count + 1) * sizeof(char *));
 	if (result == NULL)
 		return (ft_freearr(result));
-	while (i < w_count)
+	while (++i < w_count)
 	{
 		while (s[j] == c)
 			j++;
@@ -77,7 +77,6 @@ char	**ft_split(char const *s, char c)
 			result[i] = ft_substr(s, j, ft_countletter(s + j, c));
 			j += ft_countletter(s + j, c);
 		}
-		i++;
 	}
 	result[i] = NULL;
 	return (result);
