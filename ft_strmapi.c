@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 11:44:24 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/11 11:50:17 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/13 16:14:32 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*res;
 
 	i = 0;
-	if (s == NULL)
+	if (!s || !f)
 		return (NULL);
-	res = malloc((ft_strlen(s) + 1) * sizeof(char));
+	res = ft_calloc((ft_strlen(s) + 1), sizeof(char));
+	if (res == NULL)
+		return (NULL);
 	while (s[i])
 	{
 		res[i] = f(i, s[i]);
