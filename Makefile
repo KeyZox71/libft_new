@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/12 14:03:19 by adjoly           ###   ########.fr        #
+#    Updated: 2023/11/14 10:30:27 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,10 +74,6 @@ $(NAME): $(OBJS)
 	$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@
 
 all: $(NAME)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
 bonus: $(OBJS_BONUS)
 	ar -rcs $(NAME) $(OBJS_BONUS)
