@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 10:57:44 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/18 11:07:59 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/18 11:10:32 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,4 @@ void	ft_putnbrbase_fd(int n, char *base, int fd)
 		ft_putnbrbase_fd(nbr / base_len, base, fd);
 		write(fd, &base[nbr % base_len], 1);
 	}
-}
-
-int	main(int ac, char **av)
-{
-	(void)ac;
-	ft_putnbrbase_fd(ft_atoi(av[1]), "0123456789abcdef", 1);
 }
