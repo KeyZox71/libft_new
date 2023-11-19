@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/18 11:02:29 by adjoly           ###   ########.fr       */
+/*   Updated: 2023/11/18 18:35:21 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_putchar(char c);
+void	ft_putstr(char *s);
 void	ft_putnbrbase_fd(int n, char *base, int fd);
+void	ft_putnbrbase(int n, char *base);
+void	ft_putnbr(int n);
 
 #endif
