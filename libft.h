@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/18 18:35:21 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/04 15:12:48 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# include "print/printf/ft_printf.h"
+# include "io/get_next_line/get_next_line.h"
 
 typedef struct s_list
 {
