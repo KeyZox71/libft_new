@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/04 15:03:34 by adjoly           ###   ########.fr        #
+#    Updated: 2024/02/04 15:15:14 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,8 @@ FLAGS = -Werror -Wall -Wextra -g
 
 HEADERS = libft.h
 
-LIB = print/printf/libftprintf.a
+LIB = print/printf/libftprintf.a \
+		io/get_next_line/get_next_line.a
 
 $(NAME): $(OBJS)
 	make -C io/get_next_line/

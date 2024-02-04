@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbrbase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 10:57:44 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/22 14:02:37 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/04 15:21:56 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbrbase(unsigned int n, char *base)
+int	ft_putnbrbase_pf(unsigned int n, char *base)
 {
 	unsigned int	base_len;
 	int				len;
@@ -23,7 +23,7 @@ int	ft_putnbrbase(unsigned int n, char *base)
 		len += write(1, &base[n % base_len], 1);
 	else
 	{
-		len += ft_putnbrbase(n / base_len, base);
+		len += ft_putnbrbase_pf(n / base_len, base);
 		len += write(1, &base[n % base_len], 1);
 	}
 	return (len);

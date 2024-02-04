@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:48:37 by adjoly            #+#    #+#             */
-/*   Updated: 2023/12/06 14:27:05 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/04 15:23:15 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,21 +44,21 @@ int	ft_printconversion(char conversion, va_list args)
 
 	count = 0;
 	if (conversion == '%')
-		count = ft_putchar('%');
+		count = ft_putchar_p('%');
 	else if (conversion == 's')
-		count = ft_putstr(va_arg(args, char *));
+		count = ft_putstr_p(va_arg(args, char *));
 	else if (conversion == 'c')
-		count = ft_putchar(va_arg(args, int));
+		count = ft_putchar_p(va_arg(args, int));
 	else if (conversion == 'i' || conversion == 'd')
-		count = ft_putnbr(va_arg(args, int));
+		count = ft_putnbr_p(va_arg(args, int));
 	else if (conversion == 'u')
 		count = ft_putnbrulong(va_arg(args, unsigned int));
 	else if (conversion == 'p')
 		count = ft_putaddr(va_arg(args, void *));
 	else if (conversion == 'x')
-		count = ft_putnbrbase(va_arg(args, unsigned long), "0123456789abcdef");
+		count = ft_putnbrbase_pf(va_arg(args, unsigned long), "0123456789abcdef");
 	else if (conversion == 'X')
-		count = ft_putnbrbase(va_arg(args, unsigned long), "0123456789ABCDEF");
+		count = ft_putnbrbase_pf(va_arg(args, unsigned long), "0123456789ABCDEF");
 	return (count);
 }
 
@@ -84,7 +84,7 @@ int	ft_printf(const char *format, ...)
 				return (-1);
 		}
 		else
-			count += ft_putchar(format[i]);
+			count += ft_putchar_p(format[i]);
 		i++;
 	}
 	va_end(args);

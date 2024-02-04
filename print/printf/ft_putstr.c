@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:45:55 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/20 15:51:38 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/04 15:23:52 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr_p(char *s)
 {
 	int	i;
 
@@ -22,10 +22,5 @@ int	ft_putstr(char *s)
 		write(1, "(null)", 6);
 		return (6);
 	}
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	return (i);
+	return (write(1, s, ft_strlen(s)));
 }

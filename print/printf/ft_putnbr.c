@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:52:46 by adjoly            #+#    #+#             */
-/*   Updated: 2023/11/22 10:51:24 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/04 15:20:26 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putnbr_p(int n)
 {
 	unsigned int	nbr;
 	int				len;
@@ -29,7 +29,7 @@ int	ft_putnbr(int n)
 		len += write(1, &(char){nbr + '0'}, 1);
 	else
 	{
-		len += ft_putnbr(nbr / 10);
+		len += ft_putnbr_p(nbr / 10);
 		len += write(1, &(char){nbr % 10 + '0'}, 1);
 	}
 	return (len);

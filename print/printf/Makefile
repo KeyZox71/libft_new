@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adjoly <adjoly@student.42.fr>              +#+  +:+       +#+         #
+#    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/17 12:35:27 by adjoly            #+#    #+#              #
-#    Updated: 2023/11/20 15:55:52 by adjoly           ###   ########.fr        #
+#    Updated: 2024/02/04 15:18:46 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS = ft_printf.c \
 		ft_putnbr.c \
 		ft_putnbrbase.c \
 		ft_putstr.c \
-		ft_strlen.c \
+		../../str/ft_strlen.c \
 
 OBJS = $(SRCS:.c=.o)
 
