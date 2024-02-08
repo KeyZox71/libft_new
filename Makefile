@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/04 15:15:14 by adjoly           ###   ########.fr        #
+#    Updated: 2024/02/08 16:49:00 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,11 @@ SRCS = is/ft_isalnum.c \
 		str/ft_substr.c \
 		str/ft_tolower.c \
 		str/ft_toupper.c \
+		print/printf/ft_printf.c \
+		print/printf/ft_putchar.c \
+		print/printf/ft_putnbrbase.c \
+		print/printf/ft_putnbr.c \
+		print/printf/ft_putstr.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -75,7 +80,7 @@ LIB = print/printf/libftprintf.a \
 $(NAME): $(OBJS)
 	make -C io/get_next_line/
 	make -C print/printf/
-	ar -rcs	$(NAME) $(OBJS)
+	ar -rcs	$(NAME) $(OBJS) $(LIB)
 
 %.o: %.c
 	$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
