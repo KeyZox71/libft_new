@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/08 16:49:00 by adjoly           ###   ########.fr        #
+#    Updated: 2024/02/15 13:55:20 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRCS = is/ft_isalnum.c \
 		print/ft_putstr.c \
 		print/ft_putstr_fd.c \
 		str/ft_atoi.c \
+		str/ft_atoll.c \
 		str/ft_itoa.c \
 		str/ft_split.c \
 		str/ft_strchr.c \
