@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/15 13:55:01 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/22 11:29:58 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef enum s_boolean{
+	ERROR = -1,
+	FALSE,
+	TRUE,
+}	t_boolean;
 
 long long	ft_atoll(const char	*nptr);
 int			ft_atoi(const char	*nptr);
