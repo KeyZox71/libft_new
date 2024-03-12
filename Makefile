@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/03/04 13:39:42 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/12 14:36:06 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,6 +97,7 @@ clean:
 fclean: clean
 	@make -s -C io/get_next_line/ fclean
 	@rm -f $(NAME)
+	@echo "[X] Libft cleaned"
 
 re: fclean all
 
