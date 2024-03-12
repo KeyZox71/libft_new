@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/04 14:54:32 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/04 13:30:36 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,18 +26,18 @@ FLAGS = -Werror -Wall -Wextra
 HEADER = get_next_line.h
 
 $(NAME): $(OBJS)
-	ar -rcs	$(NAME) $(OBJS)
+	@ar -rcs	$(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@
+	@$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

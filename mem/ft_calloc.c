@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:02:26 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/04 14:22:20 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/04 10:10:58 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*result;
+	void	*result;
 	size_t	i;
 
 	i = 0;

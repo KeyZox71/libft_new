@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/22 11:29:58 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/04 09:06:35 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 
 # include "print/printf/ft_printf.h"
 # include "io/get_next_line/get_next_line.h"
+
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 
 typedef struct s_list
 {

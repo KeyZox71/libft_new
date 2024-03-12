@@ -6,13 +6,15 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/15 13:55:20 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/04 13:39:42 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
+
+OBJSDIR = obj/
 
 SRCS = is/ft_isalnum.c \
 		is/ft_isalpha.c \
@@ -69,34 +71,32 @@ SRCS = is/ft_isalnum.c \
 		print/printf/ft_putnbr.c \
 		print/printf/ft_putstr.c \
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(addprefix $(OBJSDIR),$(SRCS:.c=.o))
 
 FLAGS = -Werror -Wall -Wextra -g
 
 HEADERS = libft.h
 
-LIB = print/printf/libftprintf.a \
-		io/get_next_line/get_next_line.a
+LIB = io/get_next_line/get_next_line.a
 
 $(NAME): $(OBJS)
-	make -C io/get_next_line/
-	make -C print/printf/
-	ar -rcs	$(NAME) $(OBJS) $(LIB)
+	@make -s -C io/get_next_line/
+	@ar -rcs	$(NAME) $(OBJS) $(LIB)
+	@echo "[✔] Libft compiled"
 
-%.o: %.c
-	$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
+$(OBJSDIR)%.o: %.c
+	@mkdir -p $(@D)
+	@$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
 
 all: $(NAME)
 
 clean:
-	make -C io/get_next_line/ clean
-	make -C print/printf clean
-	rm -f $(OBJS)
+	@make -s -C io/get_next_line/ clean
+	@rm -f $(OBJS)
 
 fclean: clean
-	make -C io/get_next_line/ fclean
-	make -C print/printf/ fclean
-	rm -f $(NAME)
+	@make -s -C io/get_next_line/ fclean
+	@rm -f $(NAME)
 
 re: fclean all
 
