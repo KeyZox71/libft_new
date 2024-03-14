@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/04 09:06:35 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/12 14:43:11 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,5 @@ int			ft_putnbrbase_pf(unsigned int n, char *base);
 int			ft_putchar_p(char c);
 int			ft_putnbr_p(int n);
 size_t		ft_strlen(const char *s);
+
 #endif

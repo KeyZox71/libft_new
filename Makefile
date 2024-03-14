@@ -6,13 +6,13 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/03/12 14:36:06 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/12 15:04:46 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
+CC = clang
 
 OBJSDIR = obj/
 
