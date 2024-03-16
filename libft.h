@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:06:03 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/12 14:43:11 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/16 21:45:08 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef enum s_boolean{
+typedef enum s_boolean
+{
 	ERROR = -1,
 	FALSE,
 	TRUE,

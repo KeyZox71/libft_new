@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 17:12:02 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/04 14:24:58 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/16 21:45:27 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,3 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	result[i] = '\0';
 	return (result);
 }
-
-

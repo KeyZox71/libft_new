@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:48:37 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/04 15:23:15 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/16 21:46:36 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ int	ft_printconversion(char conversion, va_list args)
 	else if (conversion == 'p')
 		count = ft_putaddr(va_arg(args, void *));
 	else if (conversion == 'x')
-		count = ft_putnbrbase_pf(va_arg(args, unsigned long), "0123456789abcdef");
+		count = ft_pputnbrbase(va_arg(args, unsigned long), "0123456789abcdef");
 	else if (conversion == 'X')
-		count = ft_putnbrbase_pf(va_arg(args, unsigned long), "0123456789ABCDEF");
+		count = ft_pputnbrbase(va_arg(args, unsigned long), "0123456789ABCDEF");
 	return (count);
 }
 
