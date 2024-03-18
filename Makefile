@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/03/18 14:31:34 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/18 14:33:40 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,8 +74,6 @@ SRCS = is/ft_isalnum.c \
 OBJS = $(addprefix $(OBJSDIR),$(SRCS:.c=.o))
 
 FLAGS = -Werror -Wall -Wextra -g
-
-HEADERS = libft.h
 
 LIB = io/get_next_line/get_next_line.a
 
