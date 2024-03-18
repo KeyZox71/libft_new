@@ -6,13 +6,13 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/03/12 15:04:46 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/18 14:31:34 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = clang
+CC = cc
 
 OBJSDIR = obj/
 
@@ -86,7 +86,7 @@ $(NAME): $(OBJS)
 
 $(OBJSDIR)%.o: %.c
 	@mkdir -p $(@D)
-	@$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
+	@$(CC) $(FLAGS) $< -c -o $@
 
 all: $(NAME)
 
